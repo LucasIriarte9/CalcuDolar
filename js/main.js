@@ -7,9 +7,11 @@ const saludar = (nombre) => {
 }
 saludar(nombre);
 
+const historial = [];
 //Calcular cantidad de pesos a dolares
 const calcular = (cantidad) => {
-    alert("Tendrias en total " + cantidad / 1250 + " dolares");
+    alert("Tendrias en total " + (cantidad / 1250).toFixed(2) + " dolares");
+    agregaHistorial(historial, cantidad);
 }
 let cantidad;
 cantidad = parseFloat(prompt("Ingrese la cantidad de pesos a calcular"));
@@ -26,3 +28,14 @@ if (elegir == 1) {
     }
 }
 
+//historial de las cantidades ingresadas por el usuario;
+function agregaHistorial(array, agregar) {
+    array.push(agregar);
+}
+console.log(historial);
+function porCadaUno(array, funcion) {
+    for (const element of historial) {
+        funcion(element);
+    }
+}
+porCadaUno(historial,console.log);

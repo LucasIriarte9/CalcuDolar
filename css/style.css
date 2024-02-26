@@ -1,0 +1,28 @@
+body
+{
+    background-image: url(/images/billete.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.centro
+{
+    background-image: url(/images/argentino.jpg);
+    background-size: cover;
+    width: 45vw;
+    height: 40vh;
+}
+.ingresos{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 15px;
+}
+.centro h1{
+    text-align: center;
+}
+.inputs
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 15px;
+}
